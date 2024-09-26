@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial HTML5/HTML6</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Prism CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shorcut icon" href="images\mayor.ico" >   
+</head>
+
+<body>
+
+    <!-- Banner -->
+    <div class="banner">
+        <img src="images/banner.jpg" alt="banner" class="img-fluid w-100">
+    </div>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#inicio">Tutorial HTML5/6</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#introduccion">Introducción</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#evolucion">Evolución</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formularios">Formularios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#listas">Listas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#media">Multimedia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#svg">SVG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sombras">Sombras</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#animacion">Animación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#aws-carrusel">Carrusel</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 id="inicio" class="mb-4">Tutorial de HTML5/HTML6</h1>
+
+        <!-- Introducción -->
+        <section id="introduccion" class="mb-5">
+            <h2>1. Introducción</h2>
+            <p>HTML (HyperText Markup Language) es el lenguaje estándar para estructurar contenido web. Desde su
+                creación en 1993, ha evolucionado para adaptarse a las necesidades de la web moderna.</p>
+            <p>HTML5, lanzado en 2014, trajo nuevas etiquetas semánticas, mejoras en formularios, y soporte nativo para
+                multimedia. Por su parte, HTML6, aunque no es un estándar oficial aún, promete avances en accesibilidad,
+                semántica, y la integración con tecnologías emergentes como la realidad aumentada y virtual.</p>
+        </section>
+
+        <!-- Evolución de los Computadores -->
+        <section id="evolucion" class="mb-5">
+            <h2>2. Evolución de los Computadores</h2>
+            <p>La evolución de los computadores ha sido un proceso fascinante que ha transformado la forma en que
+                vivimos, trabajamos y nos comunicamos. Desde los primeros dispositivos mecánicos hasta los sofisticados
+                sistemas actuales, cada avance ha marcado un hito en la historia de la tecnología.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Año</th>
+                        <th>Nombre</th>
+                        <th>Historia</th>
+                        <th>Ventajas</th>
+                        <th>Desventajas</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1945</td>
+                        <td>ENIAC</td>
+                        <td>Uno de los primeros computadores electrónicos de propósito general.</td>
+                        <td>Rápido procesamiento de datos.</td>
+                        <td>Grande y costoso.</td>
+                        <td><img src="images\ENIAC.png" alt="ENIAC" style="width: 100px;"></td>
+                    </tr>
+                    <tr>
+                        <td>1956</td>
+                        <td>IBM 305 RAMAC</td>
+                        <td>Primer computador en usar un disco duro magnético.</td>
+                        <td>Almacenamiento de datos a gran escala.</td>
+                        <td>Requiere mantenimiento constante.</td>
+                        <td><img src="images\IBM 305 RAMAC.png" alt="IBM 305 RAMAC" style="width: 100px;"></td>
+                    </tr>
+                    <tr>
+                        <td>1971</td>
+                        <td>Intel 4004</td>
+                        <td>Primer microprocesador comercial.</td>
+                        <td>Permite el desarrollo de dispositivos compactos.</td>
+                        <td>Limitaciones de procesamiento.</td>
+                        <td><img src="images\Intel 4004.png" alt="Intel 4004" style="width: 100px;"></td>
+                    </tr>
+                    <tr>
+                        <td>1981</td>
+                        <td>IBM PC</td>
+                        <td>Estableció los estándares de las computadoras personales.</td>
+                        <td>Fácil de usar, accesible.</td>
+                        <td>Limitaciones iniciales de hardware y software.</td>
+                        <td><img src="images\IBM PC.png" alt="IBM PC" style="width: 100px;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Formularios en HTML5 -->
+        <section id="formularios" class="mb-5">
+            <h2>3. Formularios en HTML5</h2>
+            <form class="needs-validation" novalidate>
+                <div class="example">
+                    <div class="row mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <div class="invalid-feedback">Por favor, introduce un email válido.</div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="telefono" class="form-label">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" pattern="[0-9]{9}" required>
+                        <div class="invalid-feedback">Por favor, introduce un número de 9 dígitos.</div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="fecha" class="form-label">Fecha:</label>
+                        <input type="date" class="form-control" id="fecha" required>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="color" class="form-label">Color:</label>
+                        <input type="color" class="form-control" id="color" required>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="rango" class="form-label">Rango:</label>
+                        <input type="range" class="form-range" id="rango" min="0" max="100" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Listas en HTML -->
+        <section id="listas" class="mb-5">
+            <h2>4. Listas</h2>
+
+            <h3>Unordered List (UL)</h3>
+            <ul>
+                <li>Helado de Ajo</li>
+                <li>Yogurt de Yuca</li>
+                <li>Arroz con tolay</li>
+                <li>Chunchulo con pasas</li>
+                <li>Morcilla albina</li>
+            </ul>
+
+            <h3>Ordered List (OL)</h3>
+            <h4>Lista Ordenada</h4>
+            <ol>
+                <li>Lenguas ñeras</li>
+                <li>Azafata de camion</li>
+                <li>Psicologia de computadores</li>
+                <li>Deformacion del ser</li>
+                <li>Oleador de axilas</li>
+                <li>Probador de papel higenico</li>
+            </ol>
+
+            <h3>Mis películas</h3>
+            <ul>
+                <li>El secreto del abismo</li>
+                <li>Matrix
+                    <ol>
+                        <li>Matrix 1</li>
+                        <li>Matrix Revolutions</li>
+                        <li>Matrix Reload</li>
+                        <li>Matrix IV</li>
+                    </ol>
+                </li>
+                <li>Despues del ultimo no hay nadie</li>
+                <li>El señor de los anillos
+                    <ol>
+                        <li>La comunidad del anillo</li>
+                        <li>Las dos torres</li>
+                        <li>El retorno del rey</li>
+                    </ol>
+                     
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- Multimedia -->
+        <section id="media" class="mb-5">
+            <h2>5. Video</h2>
+            <video controls width="600">
+                <source src="images\mp4.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+
+            <h2 class="mt-4">Audio</h2>
+            <audio controls>
+                <source src="images\mp3.mp3" type="audio/mp3">
+                Tu navegador no soporta la etiqueta de audio.
+            </audio>
+        </section>
+
+        <!-- SVG -->
+        <section id="svg" class="mb-5">
+            <h1>6. SVG</h1>
+
+            <h3>Rectángulo</h3>
+            <svg width="150" height="150">
+                <rect x="0" y="0" rx="12" ry="12" width="60" height="60" fill="red" stroke="green" stroke-width="1"
+                    opacity="0.8" />
+            </svg>
+
+            <h3>Círculo</h3>
+            <svg width="150" height="150">
+                <circle cx="100" cy="100" r="45" fill="yellow" stroke="black" stroke-width="1" opacity="0.9" />
+            </svg>
+
+            <h3>Polígono</h3>
+            <svg width="150" height="150">
+                <polygon points="50,0, 82,100, 0,37, 100,37, 20,100, 50,0" fill="gold" stroke="black"
+                    stroke-width="3" />
+            </svg>
+        </section>
+
+        <!-- Sombras -->
+        <section id="sombras" class="mb-5">
+            <h2>7. Sombras, Transparencias y Degradados</h2>
+            <div class="box"></div>
+        </section>
+
+        <!-- Animación -->
+        <section id="animacion" class="mb-5">
+            <h2>8. Animación</h2>
+            <img id="carro" src="images/carro.png" alt="Carro animado" style="width:150px;">
+        </section>
+
+        <!-- Carrusel de imágenes AWS -->
+        <section id="aws-carrusel" class="mb-5">
+            <div id="awsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#awsCarousel" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#awsCarousel" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#awsCarousel" data-bs-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/Insignia.JPG" class="d-block w-100" alt="Insignia AWS">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/1.png" class="d-block w-100" alt="Imagen 1 AWS">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/2.png" class="d-block w-100" alt="Imagen 2 AWS">
+                    </div>
+                </div>
+                <!-- Flechas de navegación con SVG negras -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#awsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="black" width="30" height="30" viewBox="0 0 16 16">
+                            <path
+                                d="M11.354 1.354a.5.5 0 0 1 0 .707L6.707 6.707l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                    </span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#awsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="black" width="30" height="30" viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 1.354a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L9.293 6.5 4.646 1.854a.5.5 0 0 1 0-.707z" />
+                        </svg>
+                    </span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer mt-5 bg-success text-white py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12 d-flex align-items-center">
+                        <img src="images/perfil.jpg" alt="Foto de perfil" class="rounded-circle me-3" width="100"
+                            height="100">
+                        <div>
+                            <h4 class="mb-1">Sobre mí</h4>
+                            <p>Soy Santiago José Montaño Buitrón, Diseñador Gráfico y Desarrollador de Software.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 text-right">
+                        <h4>Información Básica</h4>
+                        <p><strong>Edad:</strong> 24 años</p>
+                        <p><strong>Correo:</strong> sjbuitron@gmail.com</p>
+                        <p><strong>Teléfono:</strong> +57 314 589 1190</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Animación del carro -->
+        <script>
+            const carro = document.getElementById('carro');
+            let position = 0;
+            let direction = 1;
+            function animateCarro() {
+                position += 5 * direction;
+                carro.style.transform = `translateX(${position}px) scaleX(${direction})`;
+                if (position > window.innerWidth - 150 || position < 0) {
+                    direction *= -1;  // Cambiar dirección
+                }
+                requestAnimationFrame(animateCarro);
+            }
+            animateCarro();
+        </script>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+</body>
+
+</html>

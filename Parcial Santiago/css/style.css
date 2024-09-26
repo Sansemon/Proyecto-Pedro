@@ -1,0 +1,171 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+h1,
+h2 {
+    color: #4CAF50;
+    /* Verde para títulos principales */
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #4CAF50 !important;
+    /* Color verde para la barra de navegación */
+}
+
+.navbar .nav-link:hover {
+    background-color: #009708 !important;
+    /* Hover verde más claro */
+}
+
+/* Formulario */
+form .form-label {
+    font-weight: bold;
+    color: #4CAF50;
+    /* Verde para etiquetas de formularios */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="color"],
+input[type="range"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+button.btn-primary {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+button.btn-primary:hover {
+    background-color: #45a049;
+    /* Más oscuro en hover */
+}
+
+/* Footer */
+footer {
+    background-color: #1e8449 !important;
+    /* Verde oscuro */
+    color: white;
+}
+
+/* Sombras y degradados */
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(46, 204, 113, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #a3e4d7, #2ecc71);
+    /* Degradado verde */
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.box2 {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(46, 134, 113, 0.7);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #76D7C4, #16A085);
+    /* Otro degradado */
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Animación */
+#carro {
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+/* Personalización de los indicadores */
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-indicators li {
+    background-color: #4CAF50;
+    /* Verde */
+}
+
+.carousel-indicators .active {
+    background-color: #2E7D32;
+    /* Verde más oscuro cuando está activo */
+}
+
+/* Flechas SVG personalizadas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Banner responsivo */
+.banner img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen mientras se adapta al ancho */
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+}
+
+/* Responsividad: Ajustes en pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center; /* Centrar los elementos del menú */
+    }
+    
+    /* Aumentar el padding en elementos de la tabla en pantallas pequeñas */
+    th, td {
+        padding: 12px;
+    }
+
+    /* Redimensionar el banner en pantallas más pequeñas */
+    .banner img {
+        width: 100%; /* Mantener el ancho completo */
+        height: auto; /* Ajustar la altura automáticamente */
+    }
+}
+
+/* Responsividad para pantallas medianas y grandes */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .navbar-brand {
+        font-size: 1.5rem; /* Ajustar el tamaño de la fuente */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Reducir el tamaño de los enlaces de navegación */
+    }
+}
